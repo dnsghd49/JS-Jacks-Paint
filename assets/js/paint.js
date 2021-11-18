@@ -11,9 +11,17 @@ function appear(color, cPrice) {
     floatRight.append(name, price)
 }
 
-// function appear2(cPrice){
+$(document).ready(function () {
+    $("#pn1").mouseover(function () {
+        $("#pn1").css("opacity", "0.5")
+    })
+    $("#pn1").mouseout(function () {
+        $("#pn1").css("opacity", "1")
+    });
+})
 
-//     floatRight.append(cPrice)
+// function test() {
+//     appear("white", "$12")
 // }
 
-appear("white", "$12")
+// test()
