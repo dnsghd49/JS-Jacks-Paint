@@ -1,3 +1,3 @@
 # JS-Jacks-Paint
 
-Please review the V1 branch 
+Please check the 'V1' branch for my changes
