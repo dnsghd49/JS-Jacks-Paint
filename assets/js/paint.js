@@ -1,18 +1,14 @@
-const colorName = document.getElementById("#color")
-const colorPrice = document.getElementsByClassName("price")
-
-
 function appear(color, cPrice) {
     let name = document.querySelector("#color")
-    let price = document.querySelector(".price")
     name.textContent = color
+    let price = document.querySelector("#ppg")
     price.textContent = cPrice
     return name, price
 }
 
 function disappear(color, cPrice) {
-    let stuff = appear(color, cPrice)
-    stuff.remove(color, cPrice)
+    let removeText = appear(color, cPrice)
+    removeText.remove
 }
 
 
