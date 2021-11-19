@@ -1,24 +1,36 @@
 const colorName = document.getElementById("#color")
 const colorPrice = document.getElementsByClassName("price")
-const floatRight = document.querySelector(".floatRight")
 
 
 function appear(color, cPrice) {
-    let name = document.createElement("h1")
+    let name = document.querySelector("#color")
+    let price = document.querySelector(".price")
     name.textContent = color
-    let price = document.createElement("h2")
     price.textContent = cPrice
-    floatRight.append(name, price)
+    return name, price
 }
 
-$(document).ready(function () {
-    $("#pn1").mouseover(function () {
-        $("#pn1").css("opacity", "0.5")
+function disappear(color, cPrice) {
+    let stuff = appear(color, cPrice)
+    stuff.remove(color, cPrice)
+}
+
+
+function img1() {
+    $(document).ready(function () {
+        $("#pn1").mouseover(function () {
+            $("#pn1").css("opacity", "0.5")
+            appear("white", "$12")
+        })
+        $("#pn1").mouseout(function () {
+            $("#pn1").css("opacity", "1")
+            disappear()
+        });
     })
-    $("#pn1").mouseout(function () {
-        $("#pn1").css("opacity", "1")
-    });
-})
+}
+
+img1()
+
 
 // function test() {
 //     appear("white", "$12")
